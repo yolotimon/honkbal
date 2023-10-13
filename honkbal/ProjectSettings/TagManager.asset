@@ -11,6 +11,8 @@ TagManager:
   - punt4
   - punt5
   - punt6
+  - landing
+  - ground
   layers:
   - Default
   - TransparentFX

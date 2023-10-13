@@ -1,0 +1,34 @@
+{
+    "name": "Custom",
+    "maps": [
+        {
+            "name": "menu",
+            "id": "eb2f8aed-4e92-481e-b355-5c66d659f485",
+            "actions": [
+                {
+                    "name": "menu-open",
+                    "type": "Button",
+                    "id": "deb0461b-504d-4d24-a99e-428c0c3f7527",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "db91ec26-bbab-46c8-9cf4-0f68b800340f",
+                    "path": "<ValveIndexController>{LeftHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "menu-open",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

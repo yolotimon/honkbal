@@ -10,6 +10,7 @@ public class ButtonVR : MonoBehaviour
     public UnityEvent onRelease;
     GameObject presser;
     bool isPressed;
+    public static bool ballIngame = false;
 
     [SerializeField] GameObject BallSpawnPoint;
     [SerializeField] GameObject Ball;
@@ -51,6 +52,14 @@ public class ButtonVR : MonoBehaviour
 
     public void shoot()
     {
-        Instantiate(Ball, BallSpawnPoint.transform.position, BallSpawnPoint.transform.rotation);
+        if (ballIngame == false)
+        {
+            var jester = Instantiate(Ball, BallSpawnPoint.transform.position, BallSpawnPoint.transform.rotation);
+            jester.name = "baseball";
+            ballIngame = true;
+        } else
+        {
+            print("already ball in game");
+        }
     }
 }
