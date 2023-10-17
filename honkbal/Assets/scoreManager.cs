@@ -63,7 +63,7 @@ public class scoreManager : MonoBehaviour
         if (currentRound < allScore.Length)
         {
             allScore[currentRound] = Mathf.Round(ball.dist);
-            textArray[currentRound].text = "round " + currentRound + ": " + Mathf.Round(ball.dist);
+            textArray[currentRound].text = Mathf.Round(ball.dist) + "M";
         }
         currentRound++;
     }

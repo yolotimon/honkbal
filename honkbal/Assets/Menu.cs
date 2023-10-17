@@ -20,7 +20,7 @@ public class Menu : MonoBehaviour
     // Update is called once per frame
     public void menuOpen()
     {
-        if (MenuActive == false)
+        if (MenuActive == false && endMenu.EndMenuActive == false)
         {
             menu.SetActive(true);
             MenuActive = true;
