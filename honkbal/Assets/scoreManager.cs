@@ -3,15 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 public class scoreManager : MonoBehaviour
 {
-    private int currentRound = 0;
+    public static int currentRound = 0;
+
+    public GameObject endMenu;
+
+    //public GameObject end;
+    //private bool MenuActive = false;
 
     public static scoreManager instance;
 
-    public float[] allScore = new float[3];
+    public static float[] allScore = new float[3];
     public TMP_Text[] textArray = new TextMeshPro[3];
+
+    //public TMP_Text score1end;
+    //public TMP_Text score2end;
+    //public TMP_Text score3end;
+    //public TMP_Text sumEnd;
 
     private int score = 0;
 
@@ -29,9 +40,21 @@ public class scoreManager : MonoBehaviour
     void Update()
     {
         //Rone.text = "round 1: " + landing.dist;
+        //if (currentRound > 2)
+        //{
+        //    Time.timeScale = 0f;
+        //    end.SetActive(true);
+        //    MenuActive = true;
+        //    score1end.text = "round 1: " + allScore[1] + "m";
+        //    score2end.text = "round 2: " + allScore[2] + "m";
+        //    score3end.text = "round 3: " + allScore[3] + "m";
+        //    float sum = allScore.Sum();
+        //    sumEnd.text = "total: " + sum.ToString() + "m";
+        //}
+
         if (currentRound > 2)
         {
-            Time.timeScale = 0f;
+            endMenu.GetComponent<endMenu>().activateEndMenu();
         }
     }
 
@@ -40,7 +63,7 @@ public class scoreManager : MonoBehaviour
         if (currentRound < allScore.Length)
         {
             allScore[currentRound] = Mathf.Round(ball.dist);
-            textArray[currentRound].text = "Distance to player: " + Mathf.Round(ball.dist);
+            textArray[currentRound].text = "round " + currentRound + ": " + Mathf.Round(ball.dist);
         }
         currentRound++;
     }

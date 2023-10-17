@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
@@ -36,6 +37,18 @@ public class Menu : MonoBehaviour
     public void quit()
     {
         Application.Quit();
-        Console.WriteLine("quit");
+        Debug.Log("Quit");
+    }
+
+    public void mainMenu()
+    {
+        scoreManager.currentRound = 0;
+        scoreManager.allScore[0] = 0;
+        scoreManager.allScore[1] = 0;
+        scoreManager.allScore[2] = 0;
+        ButtonVR.ballIngame = false;
+        MenuActive = false;
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("begin");
     }
 }
