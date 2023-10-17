@@ -26,6 +26,17 @@
                     "action": "menu-open",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "508726bd-8774-4f44-a09e-3a0491f5b777",
+                    "path": "<ViveController>{LeftHand}/menu",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "menu-open",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
