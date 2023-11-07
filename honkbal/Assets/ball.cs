@@ -14,6 +14,8 @@ public class ball : MonoBehaviour
     private GameObject middle;
     private GameObject canvas;
 
+    audiomanager manager;
+
     private bool ground = false;
 
     // Start is called before the first frame update
@@ -30,6 +32,11 @@ public class ball : MonoBehaviour
         canvas = GameObject.Find("wristCanvas");
     }
 
+    private void Awake()
+    {
+        manager = GameObject.FindGameObjectWithTag("audio").GetComponent<audiomanager>();
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "landing")
@@ -41,6 +48,11 @@ public class ball : MonoBehaviour
         {
             Destroy(gameObject);
             ButtonVR.ballIngame = false;
+        }
+
+        if (collision.gameObject.CompareTag("knuppel"))
+        {
+            audiomanager.playKnuppel(audiomanager.Ballhit);
         }
     }
 
@@ -58,7 +70,6 @@ public class ball : MonoBehaviour
             ButtonVR.ballIngame = false;
         }
     }
-
 
 
 

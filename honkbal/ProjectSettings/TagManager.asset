@@ -5,14 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ball
-  - punt1
-  - punt2
-  - punt3
-  - punt4
-  - punt5
-  - punt6
   - landing
   - ground
+  - knuppel
+  - audio
   layers:
   - Default
   - TransparentFX
