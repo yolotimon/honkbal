@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-public class audiomanager : MonoBehaviour
+public class AudioManager : MonoBehaviour
 {
-    [Header ("-----------sources-----------")]
+    [Header("-----------sources-----------")]
     [SerializeField] AudioSource knuppelSFX;
     [SerializeField] AudioSource BGM;
 
-    [Header ("-----------clips-----------")]
+    [Header("-----------clips-----------")]
     public AudioClip Ballhit;
     public AudioClip BGMclip;
 

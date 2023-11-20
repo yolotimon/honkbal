@@ -14,7 +14,7 @@ public class ball : MonoBehaviour
     private GameObject middle;
     private GameObject canvas;
 
-    audiomanager manager;
+    AudioManager audioManager;
 
     private bool ground = false;
 
@@ -34,7 +34,7 @@ public class ball : MonoBehaviour
 
     private void Awake()
     {
-        manager = GameObject.FindGameObjectWithTag("audio").GetComponent<audiomanager>();
+        audioManager = GameObject.FindGameObjectWithTag("audio").GetComponent<AudioManager>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -52,7 +52,7 @@ public class ball : MonoBehaviour
 
         if (collision.gameObject.CompareTag("knuppel"))
         {
-            audiomanager.playKnuppel(audiomanager.Ballhit);
+            audioManager.playKnuppel(audioManager.Ballhit);
         }
     }
 
